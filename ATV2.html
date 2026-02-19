@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aposentadoria: Quanto Falta?</h1><br>
+    <p>Coloque sua idade</p>
+    <input type="number" id="idade">`<br>
+    <Button onclick="CalculoH()">Mostre-me(homem)</Button>
+    <Button onclick="CalculoM()">Mostre-me(mulher)</Button>
+    <div id="Show"></div>
+</body>
+</html>
+<script>
+    let Homem = 70
+    let Mulher = 60
+    function CalculoH() {
+    Show.innerHTML = `Faltam ${Homem - idade.value}`
+    }
+    function CalculoM() {
+    Show.innerHTML = `Faltam ${Mulher - idade.value}`
+    }
+</script>
