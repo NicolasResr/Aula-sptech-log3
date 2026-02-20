@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nota da Atividade Avaliativa</h1>
+    <p>Qual seu nome meu jovem?</p>
+    <input type="text" id="nome">
+    <p>Quanto você tirou na Ativ. Avaliativa 1, Ativ. Avaliativa 2 e Ativ. Avaliativa 3?</p>
+    <input type="number" placeholder="Atividade Avaliativa 1" id="Atv1"><br> 
+    <input type="number" placeholder="Atividade Avaliativa 2" id="Atv2"><br> 
+    <input type="number" placeholder="Atividade Avaliativa 3" id="Atv3"><br> 
+    <button onclick="mostrarNota()">Mostrar Nota</button>
+    <div id="Soma"></div>
+    <div id="Show"></div>
+</body>
+</html>
+
+<script>   
+    function mostrarNota() {
+        let aluno = nome.value
+        let nota1 = Number(Atv1.value);
+        let nota2 = Number(Atv2.value);
+        let nota3 = Number(Atv3.value);
+        let total = nota1 + nota2 + nota3
+        let media = total / 3;
+        Soma.innerHTML = `A soma das suas três atividades é: ${total}`
+        Show.innerHTML = `${aluno}, a média das suas atividades é: ${media} `
+    }
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cálculo da média da SPTech</h1>
+    <p>Qual seu nome meu jovem?</p>
+    <input type="text" id="nome">
+    <p>Quanto você tirou na "continuada" e na "semestral" ?</p>
+    <input type="number" placeholder="continuada" id="continuada"><br> 
+    <input type="number" placeholder="semestral" id="semestral"><br> 
+    <button onclick="media()">Media</button>
+    <div id="resultado"></div>
+</body>
+</html>
+
+<script>   
+    function media() {
+        let aluno = nome.value
+        let nota1 = Number(continuada.value);
+        let nota2 = Number(semestral.value);
+        let total = (nota1 * 0.4) + (nota2 * 0.6);
+        resultado.innerHTML = `A média de ${aluno} será de ${total}`
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dividindo a pizza</h1>
+    <p>insira o valor da pizza</p>
+    <input type="number" id="preco">
+    <p>Insira o numero de pessoas que iram comer a pizza</p>
+    <input type="number" id="pessoas"><br> 
+    <button onclick="lovePizza()">#lovePizza</button>
+    <div id="Show"></div>
+</body>
+</html>
+
+<script>   
+    function lovePizza() {
+        let valor = Number(preco.value);
+        let amigos = Number(pessoas.value);
+        resultado = valor / amigos;
+        Show.innerHTML = `Cada um dos ${amigos} amigos vai pagar R$${resultado}`
+    }
+</script>

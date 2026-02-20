@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Depósito e Retirada de dinheiro</h1>
+    <p>Qual valor desejar depositar/retirar</p>
+    <input type="number" id="valor">
+    <button onclick="Deposito()">Depósito</button>
+    <button onclick="Retirada()">Retirar</button>
+    <div id="saldo"></div>
+</body>
+</html>
+<script>
+    let total = 0; 
+    function Deposito(){
+        total = total + Number(valor.value);
+        saldo.innerHTML = ` Depósito de R$${valor.value} efetuado! Saldo atual: R$${total} `;
+    }
+    function Retirada() {
+        total = total - Number(valor.value);
+        saldo.innerHTML = ` Retirada de R$${valor.value} efetuado! Saldo atual: R$${total} `;
+    }
+</script>

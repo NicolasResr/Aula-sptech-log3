@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fazendo divisão</h1>
+    <p>Insira o primeiro numero</p>
+    <input type="number" id="num1">
+    <p>Insira o segundo numero</p>
+    <input type="number" id="num2"><br> 
+    <button onclick="Quociente()">Quociente</button>
+    <button onclick="Resto()">Resto</button>
+    <button onclick="Completo()">Completo</button>
+    <div id="Show"></div>
+</body>
+</html>
+
+<script>
+    let dividendo;
+    let divisor;
+    let resultado;
+    
+    function Quociente() {
+        dividendo = Number(num1.value);
+        divisor = Number(num2.value);
+        resultado = dividendo / divisor;
+        Show.innerHTML = `A divisão de ${dividendo} por ${divisor} é: ${resultado}`
+    }
+    
+    function Resto() {
+        dividendo = Number(num1.value);
+        divisor = Number(num2.value);
+        resto = dividendo % divisor;
+        Show.innerHTML = `O resto divisão de ${dividendo} por ${divisor} é: ${resto}`
+    }
+    
+    function Completo() {
+        dividendo = Number(num1.value);
+        divisor = Number(num2.value);
+        resto = dividendo % divisor;
+        resultado = dividendo / divisor;
+        Show.innerHTML = `A divisão de ${dividendo} por ${divisor} é: ${resultado} O 
+        resto divisão de ${dividendo} por ${divisor} é: ${resto}`
+    }
+</script>

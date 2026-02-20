@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Economia com o Bilhete Único</h1>
+    <p>Qual o valor da passagem meu querido estudante da sptech</p>
+    <input type="number" id="tarifa">
+    <p>Quantas viagens você vai fazer em um mês?</p>
+    <input type="number" id="viagens"><br> 
+    <button onclick="verEconomia()">Ver Economia</button>
+    <div id="Show"></div>
+</body>
+</html>
+
+<script>   
+    function verEconomia() {
+        let valor = Number(tarifa.value);
+        let passagem = Number(viagens.value);
+        resultado = (valor / 2) * passagem;
+        Show.innerHTML = `Você economizará R$${resultado} por mês`
+    }
+</script>
