@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operações Aritméticas</title>
+</head>
+<body>
+
+    <h1>Calculadora Simples</h1>
+
+    <p>Digite o primeiro número:</p>
+    <input type="number" id="n1">
+
+    <p>Digite o segundo número:</p>
+    <input type="number" id="n2">
+
+    <br><br>
+
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <button onclick="multiplicar()">Multiplicar</button>
+    <button onclick="dividir()">Dividir</button>
+
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function somar() {
+        let x = Number(n1.value);
+        let y = Number(n2.value);
+        resultado.innerHTML = `A soma entre ${x} e ${y} é ${x + y}`;
+    }
+
+    function subtrair() {
+        let x = Number(n1.value);
+        let y = Number(n2.value);
+        resultado.innerHTML = `A diferença entre ${x} e ${y} é ${x - y}`;
+    }
+
+    function multiplicar() {
+        let x = Number(n1.value);
+        let y = Number(n2.value);
+        resultado.innerHTML = `O produto entre ${x} e ${y} é ${x * y}`;
+    }
+
+    function dividir() {
+        let x = Number(n1.value);
+        let y = Number(n2.value);
+        resultado.innerHTML = `A razão entre ${x} e ${y} é ${x / y}`;
+    }
+</script>

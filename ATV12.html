@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transformação Sayajin</title>
+</head>
+<body>
+
+    <h1>Poder Sayajin</h1>
+
+    <p>Digite o ki base do Sayajin:</p>
+    <input type="number" id="kiBase">
+
+    <p>Transformar em...</p>
+
+    <button onclick="ssj()">SSJ</button>
+    <button onclick="ssj2()">SSJ2</button>
+    <button onclick="ssj3()">SSJ3</button>
+
+    <div id="resultado"></div>
+
+</body>
+</html>
+
+<script>
+    function ssj() {
+        let ki = Number(kiBase.value);
+        let novoKi = ki * 50;
+        resultado.innerHTML = `Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${novoKi}`;
+    }
+
+    function ssj2() {
+        let ki = Number(kiBase.value);
+        let novoKi = ki * 100;
+        resultado.innerHTML = `Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${novoKi}`;
+    }
+
+    function ssj3() {
+        let ki = Number(kiBase.value);
+        let novoKi = ki * 200;
+        resultado.innerHTML = `Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${novoKi}`;
+    }
+</script>

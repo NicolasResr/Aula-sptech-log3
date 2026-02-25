@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fases do sono</h1>
+    <p>Quantos votos teve o Candidato a?</p>
+    <input type="text" id="ipt_Candidato1">
+    <p>Quantos votos teve o Candidato b?</p>
+    <input type="text" id="ipt_Candidato2">
+    <p>Quantos votos foram em branco?</p>
+    <input type="text" id="ipt_Branco">
+    <p>Quantos votos foram nulos?</p>
+    <input type="text" id="ipt_Nulos">
+    <button onclick="Urna()">Resultado da Eleição</button>
+    <div id="eleicao"></div>
+</body>
+</html>
+
+<script>   
+    function Urna() {
+    let CandidatoA = Number(ipt_Candidato1.value);
+    let CandidatoB = Number(ipt_Candidato2.value);
+    let Branco = Number(ipt_Branco.value);
+    let Nulo = Number(ipt_Nulos.value); 
+
+    let total = CandidatoA + CandidatoB + Branco + Nulo;
+    let percA = (CandidatoA / total * 100).toFixed(2);
+    let percB = (CandidatoB / total * 100).toFixed(2);
+    let percBranco = (Branco / total * 100).toFixed(2);
+    let percNulo = (Nulo / total * 100).toFixed(2);
+    eleicao.innerHTML = `
+        <p>Total de Votos: ${total}</p>
+        <p>Candidato A: ${percA}%</p>
+        <p>Candidato B: ${percB}%</p>
+        <p>Brancos: ${percBranco}%</p>
+        <p>Nulos: ${percNulo}%</p>
+    `;
+}
+</script>
